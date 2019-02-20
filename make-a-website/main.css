@@ -1,0 +1,38 @@
+html, body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+div {
+  padding-right: 30px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+
+}
+
+.main {
+  padding-left: 30px;
+}
+
+.nav {
+  background-color: #FFEE00;
+  width: 160px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.nav h1 {
+  padding-left: 20px;
+}
+
+video {
+  background-color: #000000;
+  border: 2px solid black;
+}
