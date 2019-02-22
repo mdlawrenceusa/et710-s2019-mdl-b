@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app class="no-js" lang="en" dir="ltr">
+<html ng-app="customersApp" class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -38,6 +38,33 @@
   </head>
   <body>
     <!-- *Begin Nav -->
+  <div data-sticky-container>
+  <div class="sticky" data-sticky data-margin-top="0">
+    <nav class="top-bar topbar-responsive">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+    <a class="topbar-responsive-logo" href="#"><strong>Site Title</strong></a>
+  </div>
+  <div id="topbar-responsive" class="topbar-responsive-links">
+    <div class="top-bar-right">
+      <ul class="menu simple vertical medium-horizontal">
+        <li><a href="#">Home</a></li>
+        <li><a href="index.html#!/experience">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button type="button" class="button hollow topbar-responsive-button">Categories</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
     <!-- *End Nav -->
 
     <!-- *Begin SubNav -->
@@ -49,7 +76,8 @@
 
 
     <!-- *Begin Content -->
-      <!-- *Begin AngularJS -->
+      <div ng-view></div>
+    <!-- *Begin AngularJS -->
         <div>
             <label>Name:</label>
             <input type="text" ng-model="yourName" placeholder="Enter a name here">
@@ -60,13 +88,158 @@
     <!-- *End Content -->
 
 
-    <!-- *Begin Footer -->
-    <!-- *End Footer -->
 
+  <!-- *Begin Footer -->
+      <footer class="marketing-site-footer">
+      <div class="grid-x grid-padding-x">
+          <div class="medium-4 cell">
+            <h4 class="marketing-site-footer-name">ET-710</h4>
+            <p>Building and maintaining websites.</p>
+            <ul class="menu marketing-site-footer-menu-social simple">
+              <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <div class="medium-4 cell">
+             <h4 class="marketing-site-footer-title">Contact Info</h4>
+            <div class="marketing-site-footer-block">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <p>Queensborough Community College<br>Bayside, NY 11364</p>
+            </div>
+            <div class="marketing-site-footer-block">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <p>718.631.6262</p>
+            </div>
+            <div class="marketing-site-footer-block">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <p>mlawrence@qcc.cuny.edu</p>
+            </div>
+          </div>
+          <div class="large-4 cell">
+            <h4 class="marketing-site-footer-title">Photos</h4>
+              <div class="grid-x grid-padding-y">
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+  	    	<div class="large-4 medium-6 small-12 cell">
+                <img src="https://placehold.it/75" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="marketing-site-footer-bottom">
+          <div class="row large-unstack align-middle">
+            <div class="column">
+              <p>&copy; MDLawrence - 2017 All rights reserved</p>
+            </div>
+            <div class="column">
+              <ul class="menu marketing-site-footer-bottom-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- *End Footer -->
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+         var app = angular.module('customersApp',['ngRoute']);
+         app.config(function($routeProvider) {
+           $routeProvider.when('/',
+             {
+               controller:'CustomersController',
+               templateUrl: 'app/views/customers.html'
+             })
+           .when('/experience',
+             {
+               controller: 'ExperienceController',
+               templateUrl: 'app/views/experience.html'
+             })
+
+             .when('/request',
+               {
+                 controller: 'RequestController',
+                 templateUrl: 'app/views/request.html'
+               })
+
+            .when('/dealer',
+               {
+                 controller: 'DealerController',
+                 templateUrl: 'app/views/dealer.html'
+               })
+
+            .when('/story',
+               {
+                 controller: 'StoryController',
+                 templateUrl: 'app/views/story.html'
+               })
+
+
+           .when('/adam',
+              {
+                controller: 'AdamController',
+                templateUrl: 'app/views/adam.html'
+              })
+
+
+         });
+         app.controller('ExperienceController', function($scope){
+           $scope.customerID = 5;
+         });
+
+         app.controller('RequestController', function($scope){
+           $scope.customerID = 5;
+         });
+
+         app.controller('StoryController', function($scope){
+           $scope.customerID = 5;
+         });
+
+         app.controller('DealerController', function($scope){
+           $scope.customerID = 5;
+         });
+
+         app.controller('AdamController', function($scope){
+           $scope.customerID = 5;
+         });
+
+
+         app.controller('CustomersController', function($scope) {
+           $scope.customers = [
+               {"id": 1, "name":"Ted", "total": 5.996},
+               {"id": 2, "name":"Michelle", "total": 10.994},
+               {"id": 3, "name":"Zed", "total": 10.99},
+               {"id": 4, "name":"Tina", "total": 15.994}
+             ];
+           });
+       </script>
+
+
+
   </body>
 </html>
