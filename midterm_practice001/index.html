@@ -55,8 +55,8 @@
         <li><a href="about/index.html">About</a></li>
         <li><a href="services/index.html">Services</a></li>
         <li><a href="index.html#!/works">Works</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html#!/news">News</a></li>
+        <li><a href="index.html#!/works">Contact</a></li>
         <li>
           <button type="button" class="button hollow topbar-responsive-button">Categories</button>
         </li>
@@ -178,15 +178,15 @@
                controller: 'WorksController',
                templateUrl: 'app/views/works.html'
              })
-             .when('/request',
+             .when('/news',
                {
-                 controller: 'RequestController',
-                 templateUrl: 'app/views/request.html'
+                 controller: 'NewsController',
+                 templateUrl: 'app/views/news.html'
                })
-            .when('/dealer',
+            .when('/contact',
                {
-                 controller: 'DealerController',
-                 templateUrl: 'app/views/dealer.html'
+                 controller: 'ContactController',
+                 templateUrl: 'app/views/contact.html'
                })
             .when('/story',
                {
@@ -202,13 +202,13 @@
          app.controller('WorksController', function($scope){
            $scope.customerID = 5;
          });
-         app.controller('RequestController', function($scope){
+         app.controller('NewsController', function($scope){
            $scope.customerID = 5;
          });
          app.controller('StoryController', function($scope){
            $scope.customerID = 5;
          });
-         app.controller('DealerController', function($scope){
+         app.controller('ContactController', function($scope){
            $scope.customerID = 5;
          });
          app.controller('AdamController', function($scope){
