@@ -1,167 +1,175 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr">
+<html ng-app class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>ET-710 Midterm Practice</title>
+
+    <!-- *Begin Angular JS -->
+      <script src="js/vendor/angular-1.7.7/angular.min.js"></script>
+      <script src="js/vendor/angular-1.7.7/angular-animate.min.js"></script>
+      <script src="js/vendor/angular-1.7.7/angular-route.min.js"></script>
+    <!-- *End Angular JS -->
+
+
+    <!-- *Begin Datatables.net -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/datatables.min.css"/>
+      <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/datatables.min.js"></script>
+    <!-- *End Datatables.net -->
+
+
+    <!-- *Begin Font Awesome -->
+     <!-- Current Version
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+     -->
+     <!-- The font Awesome code below is several revisions back.
+       https://stackoverflow.com/questions/14698589/fontawesome-not-available-as-a-font-family
+       I discovered that it would work from an article on stack overflow.  all code should at some point be updated to relfect the last calling syntax for font awesome
+     -->
+     <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+   <!-- *End FontAwesome -->
+
+
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/footer.css">
+
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <h1>Welcome to Foundation</h1>
-        </div>
-      </div>
+  <!-- *Begin Nav -->
+<div data-sticky-container>
+<div class="sticky" data-sticky data-margin-top="0">
+  <nav class="top-bar topbar-responsive">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+    <a class="topbar-responsive-logo" href="#"><strong>Midterm Practice</strong></a>
+  </div>
+  <div id="topbar-responsive" class="topbar-responsive-links">
+    <div class="top-bar-right">
+      <ul class="menu simple vertical medium-horizontal">
+        <li><a href="#">Home</a></li>
+        <li><a href="about/index.html">About</a></li>
+        <li><a href="services/index.html">Services</a></li>
+        <li><a href="index.html#!/works">Works</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button type="button" class="button hollow topbar-responsive-button">Categories</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+  <!-- *End Nav -->
 
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <div class="callout">
-            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-            <p>Once you've exhausted the fun in this document, you should check out:</p>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-              </div>
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-              </div>
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowledge.</p>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 medium-push-2 cell">
-                <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-              </div>
-              <div class="large-4 medium-4 medium-pull-2 cell">
-                <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="grid-x grid-padding-x">
-        <div class="large-8 medium-8 cell">
-          <h5>Here&rsquo;s your basic grid:</h5>
-          <!-- Grid Example -->
+  <!-- *Begin SubNav -->
+  <!-- *End SubNav -->
 
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <div class="primary callout">
-                <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-          </div>
 
-          <hr />
+  <!-- *Begin Header -->
+  <!-- *End Header -->
 
-          <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-          <form>
-            <div class="grid-x grid-padding-x">
-              <div class="large-12 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-12.cell" />
+
+  <!-- *Begin Content -->
+    <!-- *Begin Angular JS -->
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+    <!-- *End Angular JS -->
+  <!-- *End Content -->
+
+
+  <!-- *Begin Footer -->
+        <footer class="marketing-site-footer">
+        <div class="grid-x grid-padding-x">
+            <div class="medium-4 cell">
+              <h4 class="marketing-site-footer-name">ET-710</h4>
+              <p>Building and maintaining websites.</p>
+              <ul class="menu marketing-site-footer-menu-social simple">
+                <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                 <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            <div class="medium-4 cell">
+               <h4 class="marketing-site-footer-title">Contact Info</h4>
+              <div class="marketing-site-footer-block">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <p>Queensborough Community College<br>Bayside, NY 11364</p>
+              </div>
+              <div class="marketing-site-footer-block">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <p>718.631.6262</p>
+              </div>
+              <div class="marketing-site-footer-block">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <p>mlawrence@qcc.cuny.edu</p>
               </div>
             </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-4.cell" />
-              </div>
-              <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-4.cell" />
-              </div>
-              <div class="large-4 medium-4 cell">
-                <div class="grid-x">
-                  <label>Input Label</label>
-                  <div class="input-group">
-                    <input type="text" placeholder="small-9.cell" class="input-group-field" />
-                    <span class="input-group-label">.com</span>
-                  </div>
+            <div class="large-4 cell">
+              <h4 class="marketing-site-footer-title">Photos</h4>
+                <div class="grid-x grid-padding-y">
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
+                </div>
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
+                </div>
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
+                </div>
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
+                </div>
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
+                </div>
+    	    	<div class="large-4 medium-6 small-12 cell">
+                  <img src="https://placehold.it/75" alt="" />
                 </div>
               </div>
             </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-12 cell">
-                <label>Select Box</label>
-                <select>
-                  <option value="husker">Husker</option>
-                  <option value="starbuck">Starbuck</option>
-                  <option value="hotdog">Hot Dog</option>
-                  <option value="apollo">Apollo</option>
-                </select>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-6 medium-6 cell">
-                <label>Choose Your Favorite</label>
-                <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-                <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-              </div>
-              <div class="large-6 medium-6 cell">
-                <label>Check these out</label>
-                <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-                <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-12 cell">
-                <label>Textarea Label</label>
-                <textarea placeholder="small-12.cell"></textarea>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="large-4 medium-4 cell">
-          <h5>Try one of these buttons:</h5>
-          <p><a href="#" class="button">Simple Button</a><br/>
-          <a href="#" class="success button">Success Btn</a><br/>
-          <a href="#" class="alert button">Alert Btn</a><br/>
-          <a href="#" class="secondary button">Secondary Btn</a></p>
-          <div class="callout">
-            <h5>So many components, girl!</h5>
-            <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-            <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
           </div>
-        </div>
-      </div>
-    </div>
+
+
+          <div class="marketing-site-footer-bottom">
+            <div class="row large-unstack align-middle">
+              <div class="column">
+                <p>&copy; MDLawrence - 2017 All rights reserved</p>
+              </div>
+              <div class="column">
+                <ul class="menu marketing-site-footer-bottom-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="about/index.html">About</a></li>
+                  <li><a href="services/index.html">Services</a></li>
+                  <li><a href="index.html#!/works">Works</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- *End Footer -->
+
+
+
+
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
