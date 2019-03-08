@@ -1,15 +1,15 @@
 <!doctype html>
-<html ng-app="customersApp" class="no-js" lang="en" dir="ltr">
+<html ng-app class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ET-710 Midterm Practice</title>
+    <title>Services</title>
 
     <!-- *Begin Angular JS -->
-      <script src="js/vendor/angular-1.7.7/angular.min.js"></script>
-      <script src="js/vendor/angular-1.7.7/angular-animate.min.js"></script>
-      <script src="js/vendor/angular-1.7.7/angular-route.min.js"></script>
+      <script src="../js/vendor/angular-1.7.7/angular.min.js"></script>
+      <script src="../js/vendor/angular-1.7.7/angular-animate.min.js"></script>
+      <script src="../js/vendor/angular-1.7.7/angular-route.min.js"></script>
     <!-- *End Angular JS -->
 
 
@@ -31,14 +31,14 @@
    <!-- *End FontAwesome -->
 
 
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
 
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="css/subnav.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
   </head>
   <body>
@@ -50,17 +50,17 @@
     <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
     </span>
-    <a class="topbar-responsive-logo" href="#"><strong>Midterm Practice</strong></a>
+    <a class="topbar-responsive-logo" href="../index.html"><strong>Midterm Practice</strong></a>
   </div>
   <div id="topbar-responsive" class="topbar-responsive-links">
     <div class="top-bar-right">
       <ul class="menu simple vertical medium-horizontal">
-        <li><a href="#">Home</a></li>
-        <li><a href="about/index.html">About</a></li>
-        <li><a href="services/index.html">Services</a></li>
-        <li><a href="index.html#!/works">Works</a></li>
-        <li><a href="index.html#!/news">News</a></li>
-        <li><a href="index.html#!/contact">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="../index.html#!/works">Works</a></li>
+        <li><a href="../index.html#!/news">News</a></li>
+        <li><a href="../index.html#!/contact">Contact</a></li>
         <li>
           <button type="button" class="button hollow topbar-responsive-button">Categories</button>
         </li>
@@ -83,7 +83,12 @@
 
   <!-- *Begin Content -->
     <!-- *Begin Angular JS -->
-      <div ng-view></div>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
     <!-- *End Angular JS -->
   <!-- *End Content -->
 
@@ -148,12 +153,12 @@
               </div>
               <div class="column">
                 <ul class="menu marketing-site-footer-bottom-links">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="about/index.html">About</a></li>
-                  <li><a href="services/index.html">Services</a></li>
-                  <li><a href="index.html#!/works">Works</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../about/index.html">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="../index.html#!/works">Works</a></li>
+                  <li><a href="../index.html#!/news">News</a></li>
+                  <li><a href="../index.html#!/contact">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -166,69 +171,9 @@
 
 
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-
-
-    <script>
-     var app = angular.module('customersApp',['ngRoute']);
-     app.config(function($routeProvider) {
-       $routeProvider.when('/',
-         {
-           controller:'HomeController',
-           templateUrl: 'app/views/home.html'
-         })
-       .when('/works',
-         {
-           controller: 'WorksController',
-           templateUrl: 'app/views/works.html'
-         })
-         .when('/news',
-           {
-             controller: 'NewsController',
-             templateUrl: 'app/views/news.html'
-           })
-        .when('/contact',
-           {
-             controller: 'ContactController',
-             templateUrl: 'app/views/contact.html'
-           })
-        .when('/story',
-           {
-             controller: 'StoryController',
-             templateUrl: 'app/views/story.html'
-           })
-       .when('/adam',
-          {
-            controller: 'AdamController',
-            templateUrl: 'app/views/adam.html'
-          })
-     });
-     app.controller('WorksController', function($scope){
-       $scope.customerID = 5;
-     });
-     app.controller('NewsController', function($scope){
-       $scope.customerID = 5;
-     });
-     app.controller('StoryController', function($scope){
-       $scope.customerID = 5;
-     });
-     app.controller('ContactController', function($scope){
-       $scope.customerID = 5;
-     });
-     app.controller('AdamController', function($scope){
-       $scope.customerID = 5;
-     });
-     app.controller('HomeController', function($scope) {
-       $scope.customers = [
-           {"id": 1, "name":"Ted", "total": 5.996},
-           {"id": 2, "name":"Michelle", "total": 10.994},
-           {"id": 3, "name":"Zed", "total": 10.99},
-           {"id": 4, "name":"Tina", "total": 15.994}
-         ];
-       });
-   </script>
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/vendor/what-input.js"></script>
+    <script src="../js/vendor/foundation.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
