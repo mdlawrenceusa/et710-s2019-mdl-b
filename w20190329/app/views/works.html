@@ -1,29 +1,20 @@
 <div class="main" ng-controller="MainController">
    <div class="container">
-
      <h1>{{ title }}</h1>
      <h3>{{ promo }}</h3>
-
-
      <!-- *Begin Video Selector -->
       <div class="grid-container">
-
        <div class="grid-x grid-padding-x">
            <div class="large-12 cell">
              <h1>Videos</h1>
            </div>
        </div>
-
-
           <div class="grid-x grid-padding-x">
            <div class="large-12 cell">
             <div class="callout">
-
-
        <div class="grid-x grid-padding-x">
      <div ng-repeat="product in products" class="large-3 cell">
      <div class="thumbnail">
-
         <div class="card card-product-hover">
           <a href= "{{ product.videoURL }}"><img ng-src="{{ product.cover }}"> </a>
           <div class="card-product-hover-icons">
@@ -35,28 +26,15 @@
             <span class="card-product-hover-price"> {{ product.views }} Views</span>
           </div>
         </div>
-
        </div>
       </div>
-
-
-
     </div>
-
  </div>
-
-
  <!-- *End Video Selector -->
-
-
-
 </div>
 </div>
 </div>
-
    <!-- *End Content -->
-
     </div>
-
    </div>
  </div>
