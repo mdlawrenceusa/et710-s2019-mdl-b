@@ -1,14 +1,14 @@
 <!doctype html>
-<html ng-app="et710App" class="no-js" lang="en" dir="ltr">
+<html ng-app class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ET-710</title>
+    <title>eagle-i</title>
     <!-- *Begin AnuglarJS -->
-              <script src="js/vendor/angular-1.7.8/angular.min.js"></script>
-              <script src="js/vendor/angular-1.7.8/angular-animate.min.js"></script>
-              <script src="js/vendor/angular-1.7.8/angular-route.min.js"></script>
+              <script src="../js/vendor/angular-1.7.8/angular.min.js"></script>
+              <script src="../js/vendor/angular-1.7.8/angular-animate.min.js"></script>
+              <script src="../s/vendor/angular-1.7.8/angular-route.min.js"></script>
           <!-- *End AnuglarJS -->
 
           <!-- *Begin Datatables.net -->
@@ -28,18 +28,17 @@
 
 
 
-    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
 
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="css/subnav.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="../css/social.css">
     <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
-    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="../css/parallax.css">
 
   </head>
   <body>
@@ -56,14 +55,14 @@
     <div id="topbar-responsive" class="topbar-responsive-links">
       <div class="top-bar-right">
         <ul class="menu simple vertical medium-horizontal">
-          <li><a href="#">Home</a></li>
-          <li><a href="index.html#!/about">About</a></li>
-          <li><a href="index.html#!/services">Services</a></li>
-          <li><a href="index.html#!/works">Works</a></li>
-          <li><a href="index.html#!/news">News</a></li>
-          <li><a href="index.html#!/contact">Contact</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#!/about">About</a></li>
+          <li><a href="../index.html#!/services">Services</a></li>
+          <li><a href="../index.html#!/works">Works</a></li>
+          <li><a href="../index.html#!/news">News</a></li>
+          <li><a href="../index.html#!/contact">Contact</a></li>
           <li>
-            <a href="eaglei/index.html"><button type="button" class="button hollow topbar-responsive-button">EAGLE-I</button></a>
+            <a href="#"><button type="button" class="button hollow topbar-responsive-button">EAGLE-I</button></a>
           </li>
         </ul>
       </div>
@@ -74,19 +73,54 @@
 
 
       <!-- *End Nav -->
+      <!-- *Begin Parallax -->
+      <div class="bgimg-1">
+        <div class="caption">
+        <span class="border">SCROLL DOWN</span>
+        </div>
+      </div>
+
+      <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <h3 style="text-align:center;">Parallax Demo</h3>
+        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+      </div>
+
+      <div class="bgimg-2">
+        <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
+      </div>
+
+      <div class="bgimg-3">
+        <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
+      </div>
+
+      <div class="bgimg-1">
+        <div class="caption">
+        <span class="border">COOL!</span>
+        </div>
+      </div>
+      <!-- *End Parallax -->
 
       <!-- *Begin SubNav -->
       <!-- *End SubNav -->
 
 
       <!-- *Begin Header -->
-
-      <!-- *End Header -->
-
-
-      <!-- *Begin Content -->
-      <div ng-view></div>
-      <!-- *Begin AngularJS -->
       <!-- *Begin Socials -->
       <div class="rounded-social-buttons">
         <a class="social-button facebook" href="#"></a>
@@ -100,8 +134,23 @@
         <a class="social-button tumblr" href="#"></a>
       </div>
       <!-- *End Socials -->
+      <!-- *End Header -->
+
+
+      <!-- *Begin Content -->
+
+      <!-- *Begin AngularJS -->
+      <div>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+      </div>
       <!-- *End AngularJS -->
       <!-- *End Content -->
+
+
+
 
 
 
@@ -166,12 +215,12 @@
                     </div>
                     <div class="column">
                       <ul class="menu marketing-site-footer-bottom-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="index.html#!/about">About</a></li>
-                        <li><a href="index.html#!/services">Services</a></li>
-                        <li><a href="index.html#!/works">Works</a></li>
-                        <li><a href="index.html#!/news">News</a></li>
-                        <li><a href="index.html#!/contact">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#!/about">About</a></li>
+                        <li><a href="../index.html#!/services">Services</a></li>
+                        <li><a href="../index.html#!/works">Works</a></li>
+                        <li><a href="../index.html#!/news">News</a></li>
+                        <li><a href="../index.html#!/contact">Contact</a></li>
                       </ul>
                     </div>
                   </div>
@@ -180,14 +229,14 @@
             <!-- *End Footer -->
 
 
-      <script src="js/vendor/jquery.js"></script>
-      <script src="js/vendor/what-input.js"></script>
-      <script src="js/vendor/foundation.js"></script>
-      <script src="js/app.js"></script>
+      <script src="../js/vendor/jquery.js"></script>
+      <script src="../js/vendor/what-input.js"></script>
+      <script src="../js/vendor/foundation.js"></script>
+      <script src="../js/app.js"></script>
 
-      <script src="js/spa.js"></script>
+      <script src="../js/spa.js"></script>
       <!-- Controllers -->
-      <script src="js/controllers/MainController.js"></script>
+      <script src="../js/controllers/MainController.js"></script>
 
     </body>
 </html>
