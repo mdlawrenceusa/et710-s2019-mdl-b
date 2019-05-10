@@ -1,0 +1,49 @@
+
+.main-links {
+  padding-top: 9rem;
+  margin-bottom: 9rem;
+}
+
+.main-links h4 {
+  font-family: "Sanchez", serif;
+}
+
+@media screen and (max-width: 45em) {
+  .main-links h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.main-links .columns {
+  position: relative;
+}
+
+.main-links .title-box {
+  text-align: center;
+  background: white;
+  color: #4ec6cd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: .2rem 1rem;
+}
+
+.main-links .title-box .title-box-title {
+  margin-bottom: 0;
+}
+
+.main-links .title-box .title-box-title:hover {
+  color: #227479;
+  transition: color .3s ease-in;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .main-links img {
+    height: 560px;
+    display: block;
+    margin: 9rem auto;
+  }
+}
